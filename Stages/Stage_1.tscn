@@ -13,13 +13,12 @@ position = Vector2( 6090, 562.5 )
 texture = ExtResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 158.094, 828.076 )
+position = Vector2( 1671.62, 824.326 )
 
 [node name="ground" type="Sprite" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="ground"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ground/StaticBody2D"]
-visible = false
 position = Vector2( 6131.87, 1041.13 )
 shape = SubResource( 1 )
