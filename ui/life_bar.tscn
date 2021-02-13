@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://sprites/ui/border.png" type="Texture" id=1]
+[ext_resource path="res://sprites/ui/under.png" type="Texture" id=2]
+[ext_resource path="res://sprites/ui/white_bar.png" type="Texture" id=3]
+[ext_resource path="res://ui/TextureProgress.gd" type="Script" id=4]
+
+[node name="life_bar" type="Control"]
+margin_right = 160.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="life_bar" type="TextureProgress" parent="."]
+margin_left = -80.0
+margin_top = -180.0
+margin_right = 1362.0
+margin_bottom = -64.0
+rect_scale = Vector2( 0.1, 0.2 )
+value = 100.0
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 1 )
+texture_progress = ExtResource( 3 )
+tint_progress = Color( 0.207843, 0.823529, 0.117647, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

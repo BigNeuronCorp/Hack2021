@@ -1,7 +1,7 @@
 extends Area2D
 
 const speed = 1000
-var motion = Vector2()
+var motion2 = Vector2()
 var direction = 1
 
 func _ready():
@@ -14,8 +14,8 @@ func set_kn_direction(dir):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	motion.x = speed*delta * direction
-	translate(motion)
+	motion2.x = speed*delta * direction
+	translate(motion2)
 
 
 func _on_VisibilityNotifier2D_screen_exited():

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/laser_beam.png-00c7f0e0f588412ed0150ac33d7cf3d5.stex"
+path="res://.import/Dead_Doc_1.png-4dafba4c8624ff0af90d9dd5d1504d08.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/doctor_2/laser_beam.png"
-dest_files=[ "res://.import/laser_beam.png-00c7f0e0f588412ed0150ac33d7cf3d5.stex" ]
+source_file="res://sprites/doctor_2/Dead_Doc_1.png"
+dest_files=[ "res://.import/Dead_Doc_1.png-4dafba4c8624ff0af90d9dd5d1504d08.stex" ]
 
 [params]
 

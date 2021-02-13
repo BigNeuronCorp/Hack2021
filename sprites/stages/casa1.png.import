@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/minecraft_block.png-b4486f4649710cd81f04765b67363f40.stex"
+path="res://.import/casa1.png-333c510e7f69a1c421209721d3042e80.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Stages/minecraft_block.png"
-dest_files=[ "res://.import/minecraft_block.png-b4486f4649710cd81f04765b67363f40.stex" ]
+source_file="res://sprites/stages/casa1.png"
+dest_files=[ "res://.import/casa1.png-333c510e7f69a1c421209721d3042e80.stex" ]
 
 [params]
 
