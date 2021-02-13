@@ -95,6 +95,8 @@ __meta__ = {
 "_edit_group_": true
 }
 
+[node name="Node" type="Node" parent="tile7"]
+
 [node name="tile3" type="Sprite" parent="."]
 position = Vector2( 6043.07, 752.879 )
 scale = Vector2( 0.398224, 0.804585 )
