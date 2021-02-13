@@ -1,10 +1,11 @@
 extends Node2D
 
+
 func _on_right_touch_button_pressed():
-	Input.action_press("ui_right")
+	Input.action_press("right")
 func _on_left_touch_button_pressed():
-	Input.action_press("ui_left")
+	Input.action_press("left")
 func _on_left_touch_button_released():
-	Input.action_release("ui_left")
+	Input.action_release("left")
 func _on_right_touch_button_released():
-	Input.action_release("ui_right")
+	Input.action_release("right")
