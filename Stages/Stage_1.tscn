@@ -1,23 +1,42 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Personaje/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Character/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Stages/background.png" type="Texture" id=2]
 [ext_resource path="res://sprites/tiles/tile copia.png" type="Texture" id=3]
+[ext_resource path="res://sprites/stages/casa1.png" type="Texture" id=4]
+[ext_resource path="res://enemies/dummy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://powerup/PowerUp.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Stages/Stage_1.gd" type="Script" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 6130.22, 87.472 )
+extents = Vector2( 200, 2400 )
 
 [sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 6130.22, 87.472 )
+
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 600.572, 36.2966 )
 
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 40, 500 )
+
 [node name="Stage_1" type="Node2D"]
+script = ExtResource( 7 )
 
 [node name="background" type="Sprite" parent="."]
 position = Vector2( 6090, 562.5 )
 texture = ExtResource( 2 )
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1671.62, 824.326 )
+[node name="casa1" type="Sprite" parent="."]
+position = Vector2( 12080, 800 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="casa1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="casa1/StaticBody2D"]
+position = Vector2( 599.996, -1700 )
+shape = SubResource( 1 )
 
 [node name="ground" type="Sprite" parent="."]
 
@@ -25,7 +44,7 @@ position = Vector2( 1671.62, 824.326 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ground/StaticBody2D"]
 position = Vector2( 6131.87, 1041.13 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="tile" type="Sprite" parent="."]
 position = Vector2( 2092.76, 756.185 )
@@ -39,7 +58,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tile/StaticBody2D"]
 position = Vector2( 1.45264, -0.254395 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -56,7 +75,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tile2/StaticBody2D"]
 position = Vector2( 1.45264, -0.254395 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -73,7 +92,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tile6/StaticBody2D"]
 position = Vector2( 1.45264, -0.254395 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -90,7 +109,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tile7/StaticBody2D"]
 position = Vector2( 1.45264, -0.254395 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -109,13 +128,13 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tile3/StaticBody2D"]
 position = Vector2( 1.45264, -0.254395 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="tile4" type="Sprite" parent="."]
-position = Vector2( 3967.09, 633.874 )
+position = Vector2( 3948.09, 714.874 )
 scale = Vector2( 0.398224, 0.804585 )
 texture = ExtResource( 3 )
 __meta__ = {
@@ -126,7 +145,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tile4/StaticBody2D"]
 position = Vector2( 1.45264, -0.254395 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -143,7 +162,57 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tile5/StaticBody2D"]
 position = Vector2( 1.45264, -0.254395 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="left_limit" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left_limit"]
+position = Vector2( -40, 500 )
+shape = SubResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1656.52, 801.673 )
+
+[node name="PowerUp" parent="." instance=ExtResource( 6 )]
+position = Vector2( 4917.9, 848.904 )
+
+[node name="Enemy" parent="." groups=[
+"Enemies",
+] instance=ExtResource( 5 )]
+position = Vector2( 3110.03, 772.145 )
+
+[node name="Enemy2" parent="." groups=[
+"Enemies",
+] instance=ExtResource( 5 )]
+position = Vector2( 4914.72, 320.721 )
+
+[node name="Enemy3" parent="." groups=[
+"Enemies",
+] instance=ExtResource( 5 )]
+position = Vector2( 5983.19, 313.17 )
+
+[node name="Enemy4" parent="." groups=[
+"Enemies",
+] instance=ExtResource( 5 )]
+position = Vector2( 7319.71, 788.883 )
+
+[node name="Enemy5" parent="." groups=[
+"Enemies",
+] instance=ExtResource( 5 )]
+position = Vector2( 9226.34, 328.272 )
+
+[node name="Enemy6" parent="." groups=[
+"Enemies",
+] instance=ExtResource( 5 )]
+position = Vector2( 10094.7, 788.882 )
+
+[node name="Enemy7" parent="." groups=[
+"Enemies",
+] instance=ExtResource( 5 )]
+position = Vector2( 10974.4, 532.149 )
+
+[node name="Score_count" type="Node2D" parent="."]
+visible = false
