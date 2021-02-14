@@ -9,29 +9,34 @@
 [ext_resource path="res://ui/scoreboard.tscn" type="PackedScene" id=7]
 
 [node name="Node2D" type="Node2D"]
-position = Vector2( 432.488, 902.352 )
+position = Vector2( 512.488, 901.352 )
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="right" type="TouchScreenButton" parent="."]
-position = Vector2( -32.488, 17.6482 )
+position = Vector2( -32.488, 16 )
+scale = Vector2( 1.25, 1.25 )
 normal = ExtResource( 6 )
+passby_press = true
 
 [node name="left" type="TouchScreenButton" parent="."]
-position = Vector2( -272.488, 17.6482 )
+position = Vector2( -272.488, 16 )
+scale = Vector2( 1.26, 1.26 )
 normal = ExtResource( 5 )
+passby_press = true
 
 [node name="jump" type="TouchScreenButton" parent="."]
-position = Vector2( 1727.51, -122.352 )
+position = Vector2( 1688.83, -155.988 )
+scale = Vector2( 1.25, 1.25 )
 normal = ExtResource( 3 )
+passby_press = true
 
 [node name="shoot" type="TouchScreenButton" parent="."]
-position = Vector2( 1547.51, 17.6482 )
+position = Vector2( 1503.78, 10.921 )
+scale = Vector2( 1.25, 1.25 )
 normal = ExtResource( 1 )
+passby_press = true
 
 [node name="pause" type="TouchScreenButton" parent="."]
 position = Vector2( -412.488, -882.352 )
